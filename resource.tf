@@ -20,5 +20,9 @@ user_data = <<-EOF
 }
 
 
-data "aws_security_group" "sg"
-  name   = "rdssecurity"
+data "aws_security_group" "sg_gui" {
+  filter {
+    name   = "group-name"
+    values = ["rdssecurity"]
+  }
+}

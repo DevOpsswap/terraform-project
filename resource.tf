@@ -3,7 +3,7 @@ resource "aws_instance" "webserver" {
   instance_type           = "var.instancetype"
   vpc_security_group_ids  = ["var.sg", "aws_security_group.webserversg.id" , "data.aws_security_group.sg_gui.id"]
   key_name                = "var.keyname"
-  count                   = var.nosofinstance
+  count                   = var.nosofinstances
   disable_api_termination = var.api_termination
 
   tags = {

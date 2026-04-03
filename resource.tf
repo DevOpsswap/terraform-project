@@ -20,5 +20,5 @@ user_data = <<-EOF
 }
 
 
-data "aws_security_group" "sg_gui"
+data "aws_security_group" "sg"
   name   = "rdssecurity"

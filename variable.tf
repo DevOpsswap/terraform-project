@@ -17,7 +17,7 @@ variable "api_termination" {
   default = true
 } 
 
-variable "nosofinstance" {
+variable "nosofinstances" {
   default = 2
 }
 

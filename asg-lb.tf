@@ -34,7 +34,7 @@ resource "aws_lb" "app_lb" {
     internal = false
     load_balancer_type = "application"
     security_groups = [aws_security_group.web_sg.id]
-    subnets = [data.aws_subnet.default.ids]
+    subnets = [data.aws_subnet.default.id]
  
 }
 
@@ -66,7 +66,7 @@ resource "aws_launch_template" "example" {
     security_groups             = [aws_security_group.web_sg.id]
   }
   
-  user_data = base64decode(<<-EOF
+  user_data = base64encode(<<-EOF
               #!/bin/bash
               yum update -y
               yum install -y httpd
@@ -106,4 +106,3 @@ resource "aws_launch_template" "example" {
 
 
 
-  

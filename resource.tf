@@ -28,27 +28,27 @@ data "aws_security_group" "sg_gui" {
 }
 
 
-output "webserver_public_ip" {
+#output "webserver_public_ip" {
   #value = aws_instance.webserver.public_ip
 }   
 
-output "webserver_instance_id" {
+# "webserver_instance_id" {
   #value = aws_instance.webserver.id
 }
 
-output "webserver_public_dns" {
+#output "webserver_public_dns" {
   #value = aws_instance.webserver.public_dns
 }
 
-output "webserver_instance_state" {
+#output "webserver_instance_state" {
   #value = aws_instance.webserver.instance_state
 }   
 
-output "webserver_sg_id" {
+#output "webserver_sg_id" {
   #value = aws_security_group.webserversg.id
 }
 
-output "webserver_sg_arn" {
+#output "webserver_sg_arn" {
   #value = aws_security_group.webserversg.arn
 }
 

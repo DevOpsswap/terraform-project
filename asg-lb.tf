@@ -87,7 +87,7 @@ resource "aws_launch_template" "example" {
       id      = aws_launch_template.example.id
       version = "$Latest"
     }
-    vpc_zone_identifier       = data.aws_subnet.default.ids
+    vpc_zone_identifier       = data.aws_subnet.default.id
     target_group_arns         = [aws_lb_target_group.tg.arn]
     health_check_type         = "ELB"
     health_check_grace_period = 120
